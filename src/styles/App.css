@@ -1,0 +1,840 @@
+/* ------------- */
+/* GLOBAL STYLES */
+/* ------------- */
+* {
+  box-sizing: border-box;
+  font-family: 'Playfair Display','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  /* Primary Theme Colors */
+  --bg-white: #f9f9f9;      /* Primary background color */
+  --subtext-gray: #9D9D9D;  /* Subtext and small text on section backgrounds */
+
+    /* BRAND BLUE - Used for headers and alternating page backgrounds */
+  --brand-blue-100: #d4e6f2;
+  --brand-blue-200: #a9cce5;
+  --brand-blue-300: #7fb3d1;
+  --brand-blue-400: #5598bb;
+  --brand-blue-500: #15527f; /* Base */
+  --brand-blue-500-opaque: rgba(21, 82, 127, .95);
+  --brand-blue-600: #11466d;
+  --brand-blue-700: #0e3a5b;
+  --brand-blue-800: #0a2d49;
+  --brand-blue-900: #061f33; /* Darker shade of primary, use for hover states or dark sections */
+
+    /* BRAND YELLOW - Accent color for links, button borders, etc. */
+  --brand-yellow-100: #fdf8df;
+  --brand-yellow-200: #fbeeb0;
+  --brand-yellow-300: #f9e37e;
+  --brand-yellow-400: #f6d958;
+  --brand-yellow-500: #f0c845; /* Base */
+  --brand-yellow-600: #d4ad34;
+  --brand-yellow-700: #b99128;
+  --brand-yellow-800: #9e761c;
+  --brand-yellow-900: #735712;     
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: var(--deep-navy);
+}
+
+section {
+  padding: 3rem 1rem;
+}
+
+/* GLOBAL FONT STYLES */
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: var(--brand-blue-500);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.maxw-1200 {
+  max-width: 1200px;
+}
+
+/* ------------- */
+/* ACCESSIBILITY */
+/* ------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+
+/* ------ */
+/* HEADER */
+/* ------ */
+header {
+  background: var(--bg-white);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO AND SITE TITLE */
+.logo-container {
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+}
+
+.logo {
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.signup-btn {
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+  margin-right: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-btn:hover {
+  background-color: var(--brand-yellow-500);
+  color: var(--brand-blue-500);
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-right: 2rem;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+a {
+  /* color: #fff; */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--brand-blue-800);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-yellow-500);
+  text-decoration-thickness: .2rem;
+}
+
+/* MOBILE NAVIGATION */
+.nav-links {
+  display: none;
+}
+
+.nav-links a {
+  color: var(--brand-blue-500);
+}
+
+.nav-links.active {
+  color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--brand-blue-500-opaque);
+  padding: 1rem 0;
+  z-index: 900;
+  transition: background-color 0.5s ease;
+}
+
+.nav-links.active li {
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-links.active li:first-child {
+  margin-top: 4rem;
+}
+
+.nav-links.active a {
+  color: var(--bg-white) !important;
+  font-size: 1.5rem;
+}
+
+/* HAMBURGER ICON */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 999;
+  background: none;
+  border: none;
+  padding: none;
+  margin: none;
+}
+
+.hamburger .line {
+  width: 100%;
+  height: 5px;
+  background-color: var(--brand-blue-800);
+  transition: all 0.3s ease;
+}
+
+.hamburger .line.active {
+  background-color: var(--bg-white);
+}
+
+.hamburger.active .line:nth-child(2) { /* Top line forms X */
+  transform: rotate(45deg);
+  position: relative;
+  top: 8.5px;
+}
+
+.hamburger.active .line:nth-child(3) { /* Middle line disappears */
+  opacity: 0;
+}
+
+.hamburger.active .line:nth-child(4) { /* Bottom line forms X */
+  transform: rotate(-45deg);
+  position: relative;
+  top: -15px;
+}
+
+
+/* ------ */
+/* FOOTER */
+/* ------ */
+.footer {
+  background-color: var(--brand-blue-500);
+  color: #fff;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.site-map ul {
+  flex-direction: column;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: auto;
+}
+
+.site-map ul li {
+  margin: auto;
+}
+
+.site-map a {
+  color: #fff;
+}
+
+.copyright {
+  font-size: 0.875rem;
+}
+
+/* ------------------- */
+/* HOME (HERO) SECTION */
+/* ------------------- */
+#hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* adds some padding on the sides for better readability */
+  overflow: hidden;
+}
+
+.hero-header {
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
+.video-container {
+  width: 100%;
+  position: relative;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps the video full screen and responsive */
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+  z-index: 2;
+}
+
+.hero-content p {
+  color: #fff;
+  font-size: 1rem;
+  max-width: 500px;
+  letter-spacing: .05rem;
+  margin: .1rem 0;
+}
+
+.hero-content p.sub-text {
+  font-size: .8rem;
+}
+
+/* ----------------- */
+/* TOWN INFO */
+/* ----------------- */
+#town-info {
+  background-color: var(--brand-blue-500);
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  margin-top: -.5rem;
+}
+
+#town-info h2 {
+  color: #fff;
+}
+
+.town-info-container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.town-info-container img {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+
+/* ----------------- */
+/* PROPERTY LISTINGS */
+/* ----------------- */
+#property-listings {
+  width: 100%;
+  padding: 2rem 0 0 0;
+  margin: 0;
+}
+
+#property-listings h2 {
+  width: 100%;
+  padding: 1rem;
+  font-weight: lighter;
+}
+
+.property-cards {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+}
+
+.property-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.property-image-container {
+  width: 100%;
+  margin-top: -1rem;
+  position: relative;
+}
+
+.sold {
+  font-size: 30vw;
+  color: rgba(255, 255, 255, .8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  margin-top: -1rem;
+  padding: 0;
+  transform: translate(-50%, -50%);
+}
+
+.property-card img {
+  width: 100%;
+}
+
+.property-card-info {
+  border-left: 1px solid var(--brand-yellow-500);
+  margin: -1rem 1rem 1rem 1rem;
+  padding: 1rem .2rem 0 .2rem;
+  z-index: 10;
+}
+
+.property-card-info h3 {
+  color: var(--brand-yellow-500);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.property-card-info p {
+  margin: 0;
+  color: var(--brand-blue-500);
+}
+
+.property-card-info p.price {
+  margin-bottom: .5rem;
+  font-weight: bold;
+}
+
+.property-card-info p.shortDescription {
+  color: var(--subtext-gray);
+  margin-bottom: .5rem;
+  display: flex; /* change to 'none' if you want hidden on mobile */
+}
+
+.property-card:nth-child(even) {
+  background-color: var(--brand-blue-500);
+}
+
+.property-card:nth-child(even) p {
+  color: #fff;
+}
+
+.property-card:nth-child(even) p:last-child {
+  color: var(--brand-yellow-500);
+}
+
+/* --------------- */
+/* CONTACT SECTION */
+/* --------------- */
+#contact {
+  padding: 1rem;
+}
+.contact-section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-section h2 {
+  width: 100%;
+  font-weight: lighter !important;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Form styling */
+form,
+.thank-you-message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+fieldset legend {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.contact-info {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.contact-info_logo {
+  margin: auto;
+  height: auto;
+  width: 100%;
+}
+
+.contact-info_message p {
+  color: var(--subtext-gray);
+}
+
+.contact-info_realtor {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info_realtor p {
+  color: var(--brand-yellow-500);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.contact-info_realtor a {
+  color: var(--brand-yellow-500);
+  margin: .2rem 0;
+  font-size: .8rem;
+  padding: 0;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: .8rem;
+  color: #333;
+}
+
+form input, 
+form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-bottom: 1px solid var(--brand-yellow-500);
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form textarea {
+  border: 1px solid var(--brand-yellow-500);
+  height: 200px;
+  resize: vertical;
+}
+
+/* Focus effect for inputs */
+form input:focus, 
+form textarea:focus {
+  border-color: var(--brand-blue-500);
+  outline: none;
+}
+
+/* Button styling */
+form button {
+  background-color: var(--brand-blue-500);
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+form button:hover {
+  background-color: var(--brand-yellow-500);
+}
+
+/* Thank you message */
+.thank-you-message p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--deep-navy);
+  transition: all 0.3s ease;
+}
+
+
+
+
+/* ----------------------- */
+/* RESPONSIVE BREAKPOINTS */
+/* ----------------------- */
+
+/* Medium Screens (Tablets and up) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  a {
+    text-decoration: transparent;
+  }
+
+  .nav-links.active {
+    width: 50vw;
+    right: 0;
+    left: auto;
+  }
+  
+  /* SIGNUP BUTTON WILL DISPLAY HERE */
+  .signup-btn {
+    background-color: var(--brand-blue-500);
+    border: none;
+    border-radius: 20px;
+    color: var(--bg-white);
+    display: flex;
+    font-weight: bolder;
+    font-size: 1rem;
+    letter-spacing: .05rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+  }
+
+  .hero-header {
+    padding: 5rem 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.sub-text {
+    font-size: 1rem;
+  }
+
+  .property-card:nth-child(1) {
+    padding-top: 4rem;
+  }
+
+  .property-card {
+    padding-bottom: 8rem;
+  }
+
+  .property-card:nth-last-child(1) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-section {
+    padding: 2rem 4rem;
+  }
+
+  form,
+  .thank-you-message,
+  .contact-info {
+    max-width: 600px;
+  }
+}
+
+/* Large Screens (Desktops and up) */
+@media (min-width: 1024px) {
+
+  .town-info-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-template-areas: 
+      'header header'
+      'image paragraph1'
+      'image paragraph2';
+  }
+
+  .town-info-container h2 {
+    grid-area: header;
+  }
+
+  .town-info-container img {
+    grid-area: image;
+  }
+
+  .town-info-container p:nth-of-type(1) {
+    grid-area: paragraph1;
+  }
+
+  .town-info-container p:nth-of-type(2) {
+    grid-area: paragraph2;
+  }
+
+  #property-listings {
+    margin: auto;
+  }
+
+  .property-card {
+    flex-direction: row;
+
+  }
+
+  .property-image-container {
+    width: 40%;
+  }
+
+  .sold {
+    top: 7rem;
+    font-size: 7rem;
+  }
+
+  .property-card-info {
+    padding: 2rem .2rem 0 2rem;
+    width: 60%;
+  }
+
+  .property-card-info p.shortDescription {
+    display: flex;
+  }
+
+  .contact-section {
+    padding-top: 4rem;
+  }
+
+  .contact-info_realtor {
+    flex: 1;
+  }
+
+  .form-group {
+    flex: 2;
+  }
+}
+
+/* Extra Large Screens (Wide Monitors) */
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  header {
+    padding: 2rem;
+  }
+  
+  .signup-btn {
+    margin: 0;
+  }
+
+  .logo-container {
+    width: 300px;
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+  }
+
+  .hamburger.active .line:nth-child(2) { /* Top line forms X */
+    transform: rotate(45deg);
+    position: relative;
+    top: 8.5px;
+  }
+  
+  .hamburger.active .line:nth-child(3) { /* Middle line disappears */
+    opacity: 0;
+  }
+  
+  .hamburger.active .line:nth-child(4) { /* Bottom line forms X */
+    transform: rotate(-45deg);
+    position: relative;
+    top: -15px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    height: auto;
+    background: none;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .nav-links li {
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hero-header {
+    padding: 6rem 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p.sub-text {
+    font-size: 1.1rem;
+  }
+
+  .contact-section {
+    padding: 4rem 6rem;
+  }
+}
