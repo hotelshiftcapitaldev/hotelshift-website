@@ -38,6 +38,7 @@ const Footer = () => {
                 <address className="copyright">
                     &copy; {new Date().getFullYear()} HotelShift. All rights reserved.
                 </address>
+                <a className='privacy' href=''>Privacy Policy</a>
             </section>
         </footer>
     )

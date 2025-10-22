@@ -158,7 +158,6 @@ nav ul {
 a {
   text-decoration: none;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
 }
 
 nav a:hover {
@@ -279,7 +278,8 @@ nav a:hover {
     "business-info"
     "hr"
     "site-map"
-    "copyright";
+    "copyright"
+    "privacy";
   text-align: left;
   margin: 0 auto;
   padding: 0;
@@ -306,10 +306,7 @@ nav a:hover {
   width: 100%;
 }
 
-.footer-wrapper a {
-  color: var(--bg-white);
-}
-
+.footer-wrapper a,
 .footer-wrapper a:hover {
   color: var(--bg-white);
 }
@@ -325,6 +322,13 @@ footer hr {
 .copyright {
   font-size: 0.875rem;
   grid-area: copyright;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-wrapper .privacy {
+  font-size: 0.875rem;
+  grid-area: privacy;
   text-align: center;
   width: 100%;
 }
@@ -695,7 +699,15 @@ form button:hover {
       "logo site-map"
       "business-info site-map"
       "hr hr"
-      "copyright copyright";
+      "copyright privacy";
+  }
+
+  .footer-wrapper .copyright {
+    text-align: left;
+  }
+
+  .footer-wrapper .privacy {
+    text-align: right;
   }
 
   .hero-header {
