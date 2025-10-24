@@ -158,6 +158,13 @@ nav ul {
 a {
   text-decoration: none;
   font-size: 1.1rem;
+  -webkit-tap-highlight-color: transparent; /* removes iOS gray highlight */
+}
+
+a:active {
+  background-color: transparent; /* removes default blue/gray flash */
+  border: none;
+  outline: none;
 }
 
 nav a:hover {
