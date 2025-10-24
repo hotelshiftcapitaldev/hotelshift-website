@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import './styles/App.css'
 
-// PAGES
+// COMPONENTS
 import Header from './components/Header'
 import Footer from './components/Footer'
+
+// PAGES
+import Home from './pages/Home'
 
 
 function App() {
@@ -19,8 +22,8 @@ function App() {
     <>
       <Header />
       <Routes location={location}>
-        {/* <Route path='/' element={<Home />} />
-        <Route path='/strategy' element={<Strategy />} />
+        <Route path='/' element={<Home />} />
+        {/* <Route path='/strategy' element={<Strategy />} />
         <Route path='/projects' element={<Projects />} />
         <Route path='/project/:id' element={<ProjectDetails />} />
         <Route path='/contact' element={<Contact />} /> */}

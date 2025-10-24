@@ -337,13 +337,11 @@ footer hr {
 /* HOME (HERO) SECTION */
 /* ------------------- */
 #hero {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0; /* adds some padding on the sides for better readability */
+  height: 90vh;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-header {
