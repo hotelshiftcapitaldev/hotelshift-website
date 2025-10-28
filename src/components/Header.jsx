@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo/logo.png'
 
 const Header = () => {
@@ -66,10 +67,10 @@ const Header = () => {
         <header id='header'>
             <nav className='main-nav' aria-label='Main Navigation'>
                 {/* Logo and Name Section */}
-                <a href='#header' className='logo-container'>
+                <Link to='/' end className='logo-container'>
                     {/* <h2 className='site-title'>HotelShift</h2> */}
                     <img src={logo} alt='Logo' className='logo' />
-                </a>
+                </Link>
 
                 {/* Navigation Links */}
                 <ul 
@@ -77,8 +78,8 @@ const Header = () => {
                     ref={menuRef}
                     className={`nav-links ${isMenuOpen ? 'active' : ''}`}
                     aria-labelledby='main-navigation'>
-                    {isMenuOpen ? <li><a href='#header' onClick={closeMenu}>Home</a></li> : <></> }
-                    <li><a href='#property-listings' onClick={closeMenu}>The HotelShift Strategy</a></li>
+                    {isMenuOpen ? <li><Link to='/' end onClick={closeMenu}>Home</Link></li> : <></> }
+                    <li><Link to='/our-strategy' onClick={closeMenu}>The HotelShift Strategy</Link></li>
                     <li><a href='#contact' onClick={closeMenu}>Newsroom</a></li>
                     <li><a href='#contact' onClick={closeMenu}>Our Team</a></li>
                     <li><a href='#contact' onClick={closeMenu}>Why Hotels?</a></li>

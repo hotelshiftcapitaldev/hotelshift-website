@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom'
 
 // ASSETS
 import hotelBlue1Small from '../assets/background/hotel-blue-1-small.jpg'
@@ -24,7 +24,7 @@ const Home = () => {
                         <h2>We Renovate. <span className='text-yellow'>You Benefit.</span></h2>
                         <p>HotelShift Capital reimagines how real estate serves communities. By repurposing underutilized hotels and motels into modern, attainable apartment homes, we breathe new life into overlooked properties and neighborhoods. Our mission is to create spaces that inspire connection, stability, and long-term value - for residents, investors, and the communities we serve.</p>
                         <p>We combine adaptive reuse expertise with disciplined, impact-driven investing. Every project is rooted in deep market research, operational insight, and hands-on experience in development and management. We don’t just identify potential - we build it, transforming challenges into opportunity and vision into legacy.</p>
-                        <a className='cta-btn2'>Learn How We Do It</a>
+                        <Link to='/our-strategy' className='cta-btn2'>Learn How We Do It</Link>
                     </div>
                 </div>
             </section>
@@ -39,7 +39,7 @@ const Home = () => {
                             alt='Small image of a hotel' />
                         <h2>Our Strategy</h2>
                         <p>Join us in turning hotel conversions into high-performing, impact-driven investments.</p>
-                        <a className='cta-btn2'>How It Works</a>
+                        <Link to='/our-strategy' className='cta-btn2'>How It Works</Link>
                     </div>
                     <div>
                         <div className='card-stacked'>

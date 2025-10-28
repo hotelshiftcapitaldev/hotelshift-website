@@ -850,7 +850,6 @@ form button:hover {
   }
 
   /* HERO */
-
   .hero-content h1 {
     font-size: 3.5rem;
   }
@@ -858,6 +857,16 @@ form button:hover {
   .hero-content p {
     font-size: 1.2rem;
   }
+
+  .hero-content a {
+    box-shadow: 5px 13px 20px rgba(0,0,0,0.5);
+  }
+
+  
+
+
+
+
 
   .property-card:nth-child(1) {
     padding-top: 4rem;
@@ -913,6 +922,11 @@ form button:hover {
 
   .two-col img {
     display: block;
+  }
+
+  /* HERO */
+  #hero {
+    min-height: 60vh;
   }
 
   .town-info-container {
@@ -1014,6 +1028,7 @@ form button:hover {
   }
 
   .nav-links li a {
+    font-weight: bolder;
     text-transform: uppercase;
     text-wrap: nowrap;
   }

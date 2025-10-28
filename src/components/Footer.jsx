@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import logo from '../assets/logo/logo.png'
 
 
@@ -9,10 +11,10 @@ const Footer = () => {
         <footer className="footer">
             <section className='footer-wrapper maxw-1200'>
                 {/* Logo */}
-                <a href='#header' className='logo-container'>
+                <Link to='/' end className='logo-container'>
                     {/* <h2 className='site-title'>HotelShift</h2> */}
                     <img src={logo} alt='Logo' className='logo' />
-                </a>
+                </Link>
 
                 {/* Business Info */}
                 <nav className="business-info" aria-label='Business Information'>
@@ -27,7 +29,7 @@ const Footer = () => {
                 {/* Site Map */}
                 <nav className="site-map" aria-label='Footer Navigation'>
                     <ul>
-                        <li><a href='#property-listings'>The Hotel Shift Strategy</a></li>
+                        <li><Link to='/our-strategy'>The Hotel Shift Strategy</Link></li>
                         <li><a href='#contact'>Newsroom</a></li>
                         <li><a href='#contact'>Our Team</a></li>
                         <li><a href='#contact'>Why Hotels?</a></li>
