@@ -10,12 +10,11 @@ const Hero = () => {
 
     return (
         <section 
-            id='hero' 
+            id='hero2' 
             style={{ backgroundImage: `url(${bgImage})` }}>
             <div className='hero-content maxw-1200'>
-                <h1>The <span className='text-yellow'>HotelShift</span> Strategy</h1>
-                <p>Get returns that consistently exceed common stock & real estate benchmarks.</p>
-                <a className='cta-btn'>Contact Us</a>
+                <h1>The HotelShift Strategy</h1>
+                {/* <h1>The <span className='text-yellow'>HotelShift</span> Strategy</h1> */}
             </div>
             
         </section>

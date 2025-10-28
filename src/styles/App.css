@@ -219,24 +219,14 @@ p {
   object-position: center;
 }
 
-.two-col h2{
-  grid-area: title;
+.two-col .col-content {
+  grid-area: content;
 }
 
-.two-col p:nth-child(2) {
-  grid-area: p1;
+/* GRID ELEMENT STYLING */
+.y-center {
+  align-self: center;
 }
-
-.two-col p:nth-child(3) {
-  grid-area: p2;
-}
-
-.two-col a {
-  grid-area: button;
-}
-
-
-
 
 /* ------------- */
 /* ACCESSIBILITY */
@@ -487,14 +477,19 @@ footer hr {
 }
 
 /* ------------------- */
-/* HOME (HERO) SECTION */
+/* HERO SECTIONS */
 /* ------------------- */
-#hero {
+#hero,
+#hero2 {
   min-height: auto;
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#hero2 {
+  text-align: center;
 }
 
 .hero-content {
@@ -862,7 +857,6 @@ form button:hover {
     box-shadow: 5px 13px 20px rgba(0,0,0,0.5);
   }
 
-  
 
 
 
@@ -904,20 +898,14 @@ form button:hover {
     grid-template-columns: 1fr 1fr;
   }
 
-  .two-col-4row-start {
+  .two-col-start {
     grid-template-areas:
-      "image title"
-      "image p1"
-      "image p2"
-      "button button";
+      "image content";
   }
 
-  .two-col-4row-end {
+  .two-col-end {
     grid-template-areas:
-      "title image"
-      "p1 image"
-      "p2 image"
-      "button button";
+      "content image"
   }
 
   .two-col img {
@@ -927,6 +915,9 @@ form button:hover {
   /* HERO */
   #hero {
     min-height: 60vh;
+  }
+  #hero2 {
+    min-height: 20vh;
   }
 
   .town-info-container {

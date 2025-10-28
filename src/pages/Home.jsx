@@ -16,11 +16,11 @@ const Home = () => {
         <>
             <Hero />
             <section>
-                <div className='two-col two-col-4row-start maxw-1200'>
+                <div className='two-col two-col-start maxw-1200'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel' />
-                    <div>
+                    <div className='col-content'>
                         <h2>We Renovate. <span className='text-yellow'>You Benefit.</span></h2>
                         <p>HotelShift Capital reimagines how real estate serves communities. By repurposing underutilized hotels and motels into modern, attainable apartment homes, we breathe new life into overlooked properties and neighborhoods. Our mission is to create spaces that inspire connection, stability, and long-term value - for residents, investors, and the communities we serve.</p>
                         <p>We combine adaptive reuse expertise with disciplined, impact-driven investing. Every project is rooted in deep market research, operational insight, and hands-on experience in development and management. We don’t just identify potential - we build it, transforming challenges into opportunity and vision into legacy.</p>
@@ -80,9 +80,9 @@ const Home = () => {
 
 
             <section>
-                <div className='two-col two-col-4row-end maxw-1200'>
+                <div className='two-col two-col-end maxw-1200'>
                     <img src={`${hotelBlue3Small}`} alt='Image of a hotel' />
-                    <div>
+                    <div className='col-content'>
                         <h2>Our Team.</h2>
                         <p>Every successful hotel conversion begins with a team that understands both markets and mission. At HotelSHIFT Capital, we bring together experts in adaptive reuse, real estate investment, and economic research to repurpose underutilized properties into attainable housing that creates lasting community and investor value. Our approach blends analytical precision with practical experience in development, lending, and property transformation—ensuring every project is guided by insight and purpose.</p>
                         <p>As pioneers in impact investing, we believe that smart, data-driven real estate can do more than generate returns—it can revitalize neighborhoods and expand access to quality housing. By aligning financial performance with social impact, our team transforms overlooked assets into thriving communities that embody the future of sustainable, people-centered real estate.</p>
