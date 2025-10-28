@@ -100,6 +100,15 @@ p {
 }
 
 /* BUTTON STYLING */
+.btn2-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .signup-btn {
   cursor: pointer;
   display: none;
@@ -480,7 +489,8 @@ footer hr {
 /* HERO SECTIONS */
 /* ------------------- */
 #hero,
-#hero2 {
+#hero2,
+#cta {
   min-height: auto;
   overflow: hidden;
   background-size: cover;
@@ -488,7 +498,8 @@ footer hr {
   background-position: center;
 }
 
-#hero2 {
+#hero2,
+#cta {
   text-align: center;
 }
 
@@ -509,6 +520,19 @@ footer hr {
   /* max-width: 500px; */
   letter-spacing: .05rem;
   margin: 0;
+}
+
+
+
+/* ----------------- */
+/* CTA CONTAINER */
+/* ----------------- */
+.cta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
 }
 
 
@@ -813,6 +837,7 @@ form button:hover {
     left: auto;
   }
 
+  /* BUTTON STYLING */
   /* SIGNUP BUTTON WILL DISPLAY HERE */
   .signup-btn {
     background-color: var(--brand-blue-500);

@@ -3,6 +3,9 @@ import hotelBlue1Small from '../assets/background/hotel-blue-1-small.jpg'
 import hotelBlue2Small from '../assets/background/hotel-blue-2-small.jpg'
 import hotelBlue3Small from '../assets/background/hotel-blue-3-small.jpg'
 
+// COMPONENTS
+import CTASection from '../components/CTASection'
+
 // PAGES
 import Hero2 from '../components/Hero2'
 
@@ -55,6 +58,8 @@ const OurStrategy = () => {
                     <p>We believe impact-driven investing can outperform traditional benchmarks, delivering both financial returns and meaningful community outcomes.</p>
                 </div>
             </section>
+
+            <CTASection />
         </>
     )
 }
