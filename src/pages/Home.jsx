@@ -21,7 +21,7 @@ const Home = () => {
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel' />
                     <div className='col-content'>
-                        <h2>We Renovate. <span className='text-yellow'>You Benefit.</span></h2>
+                        <h2>We Renovate. <span className='text-yellow-500'>You Benefit.</span></h2>
                         <p>HotelShift Capital reimagines how real estate serves communities. By repurposing underutilized hotels and motels into modern, attainable apartment homes, we breathe new life into overlooked properties and neighborhoods. Our mission is to create spaces that inspire connection, stability, and long-term value - for residents, investors, and the communities we serve.</p>
                         <p>We combine adaptive reuse expertise with disciplined, impact-driven investing. Every project is rooted in deep market research, operational insight, and hands-on experience in development and management. We don’t just identify potential - we build it, transforming challenges into opportunity and vision into legacy.</p>
                         <Link to='/our-strategy' className='cta-btn2'>Learn How We Do It</Link>

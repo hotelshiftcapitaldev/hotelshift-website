@@ -14,7 +14,7 @@ const Hero = () => {
             style={{ backgroundImage: `url(${bgImage})` }}>
             <div className='hero-content maxw-1200'>
                 <h1>The HotelShift Strategy</h1>
-                {/* <h1>The <span className='text-yellow'>HotelShift</span> Strategy</h1> */}
+                {/* <h1>The <span className='text-yellow-500'>HotelShift</span> Strategy</h1> */}
             </div>
             
         </section>
