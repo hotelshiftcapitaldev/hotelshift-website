@@ -69,7 +69,14 @@ const Header = () => {
                 {/* Logo and Name Section */}
                 <Link to='/' end className='logo-container'>
                     {/* <h2 className='site-title'>HotelShift</h2> */}
-                    <img src={logo} alt='Logo' className='logo' />
+                    <img 
+                        src={logo} 
+                        alt='Logo' 
+                        className='logo'
+                        decoding='async'
+                        fetchPriority='auto'
+                        loading='lazy' 
+                    />
                 </Link>
 
                 {/* Navigation Links */}

@@ -49,6 +49,7 @@ body {
 }
 
 section {
+  position: relative;
   padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
@@ -167,6 +168,17 @@ p {
 }
 
 /* IMAGE STYLING */
+.bg-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
 .img-xs {
   max-width: 100px;
 }
@@ -493,9 +505,7 @@ footer hr {
 #cta {
   min-height: auto;
   overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+
 }
 
 #hero2,

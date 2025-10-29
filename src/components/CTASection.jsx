@@ -5,7 +5,6 @@ const CTASection = () => {
 
     return (
         <section>
-            <span className='bg-filter'></span>
             <div className='cta-container maxw-1200'>
                 <h2>Invest in the <span className='text-yellow-500'>Future of Housing.</span></h2>
                 <p>Join us in redefining real estate with data-driven conversions that create long-term value and measurable impact.</p>

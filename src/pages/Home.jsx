@@ -19,7 +19,10 @@ const Home = () => {
                 <div className='two-col two-col-start maxw-1200'>
                     <img 
                         src={`${hotelBlue2Small}`} 
-                        alt='Image of a hotel' />
+                        alt='Image of a hotel'
+                        decoding='async'
+                        fetchPriority='auto'
+                        loading='lazy' />
                     <div className='col-content'>
                         <h2>We Renovate. <span className='text-yellow-500'>You Benefit.</span></h2>
                         <p>HotelShift Capital reimagines how real estate serves communities. By repurposing underutilized hotels and motels into modern, attainable apartment homes, we breathe new life into overlooked properties and neighborhoods. Our mission is to create spaces that inspire connection, stability, and long-term value - for residents, investors, and the communities we serve.</p>
@@ -36,7 +39,10 @@ const Home = () => {
                         <img 
                             src={`${hotelBlue1Small}`}
                             className='img-sm'
-                            alt='Small image of a hotel' />
+                            alt='Small image of a hotel'
+                            decoding='async'
+                            fetchPriority='auto'
+                            loading='lazy' />
                         <h2>Our Strategy</h2>
                         <p>Join us in turning hotel conversions into high-performing, impact-driven investments.</p>
                         <Link to='/our-strategy' className='cta-btn2'>How It Works</Link>
@@ -46,7 +52,10 @@ const Home = () => {
                             <img 
                                 src={`${hotelBlue1Small}`}
                                 className='img-xs'
-                                alt='Small image of a hotel' />
+                                alt='Small image of a hotel'
+                                decoding='async'
+                                fetchPriority='auto'
+                                loading='lazy' />
                             <div>
                                 <h3>Acquire Strategically</h3>
                                 <p>Acquire distressed hotels in high-growth metros for adaptive reuse and workforce housing projects.</p>
@@ -57,7 +66,10 @@ const Home = () => {
                             <img 
                                 src={`${hotelBlue1Small}`}
                                 className='img-xs'
-                                alt='Small image of a hotel' />
+                                alt='Small image of a hotel'
+                                decoding='async'
+                                fetchPriority='auto'
+                                loading='lazy' />
                             <div>
                                 <h3>Transform with Purpose</h3>
                                 <p>Convert hotels into workforce housing, maximizing design and community impact.</p>
@@ -68,7 +80,10 @@ const Home = () => {
                             <img 
                                 src={`${hotelBlue1Small}`}
                                 className='img-xs'
-                                alt='Small image of a hotel' />
+                                alt='Small image of a hotel'
+                                decoding='async'
+                                fetchPriority='auto'
+                                loading='lazy' />
                             <div>
                                 <h3>Stabilize & Refinance</h3>
                                 <p>Refinance at 90%+ occupancy, maximizing investor returns and cash flow.</p>
@@ -81,7 +96,12 @@ const Home = () => {
 
             <section>
                 <div className='two-col two-col-end maxw-1200'>
-                    <img src={`${hotelBlue3Small}`} alt='Image of a hotel' />
+                    <img 
+                        src={`${hotelBlue3Small}`} 
+                        alt='Image of a hotel'
+                        decoding='async'
+                        fetchPriority='auto'
+                        loading='lazy' />
                     <div className='col-content'>
                         <h2>Our Team.</h2>
                         <p>Every successful hotel conversion begins with a team that understands both markets and mission. At HotelSHIFT Capital, we bring together experts in adaptive reuse, real estate investment, and economic research to repurpose underutilized properties into attainable housing that creates lasting community and investor value. Our approach blends analytical precision with practical experience in development, lending, and property transformation—ensuring every project is guided by insight and purpose.</p>
