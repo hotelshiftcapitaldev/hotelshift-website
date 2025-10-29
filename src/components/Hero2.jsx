@@ -12,7 +12,7 @@ const Hero = () => {
 
     return (
         <section id='hero2'>
-            <BGImage bgImage={bgImage} />
+            <BGImage bgImage={bgImage} fetchPriority='high' loading='eager' />
             <div className='hero-content maxw-1200'>
                 <h1>The HotelShift Strategy</h1>
                 {/* <h1>The <span className='text-yellow-500'>HotelShift</span> Strategy</h1> */}
