@@ -1,4 +1,6 @@
 // ASSETS
+import hotelBlue2Large from '../assets/background/hotel-blue-2-large.jpg'
+import hotelBlue3Large from '../assets/background/hotel-blue-3-large.jpg'
 import hotelBlue1Small from '../assets/background/hotel-blue-1-small.jpg'
 import hotelBlue2Small from '../assets/background/hotel-blue-2-small.jpg'
 import hotelBlue3Small from '../assets/background/hotel-blue-3-small.jpg'
@@ -15,10 +17,10 @@ const OurStrategy = () => {
 
     return (
         <>
-            <Hero2 />
+            <Hero2 bgImage={hotelBlue3Large} />
             
             <section>
-                <div className='two-col two-col-start maxw-1200'>
+                <div className='two-col gap-2 two-col-start maxw-1200'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'
@@ -32,7 +34,7 @@ const OurStrategy = () => {
                 </div>
             </section>
             <section>
-                <div className='two-col two-col-end maxw-1200'>
+                <div className='two-col gap-2 two-col-end maxw-1200'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'
@@ -46,7 +48,7 @@ const OurStrategy = () => {
                 </div>
             </section>
             <section>
-                <div className='two-col two-col-start maxw-1200'>
+                <div className='two-col gap-2 two-col-start maxw-1200'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'

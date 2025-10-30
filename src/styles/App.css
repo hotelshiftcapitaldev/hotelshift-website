@@ -245,6 +245,9 @@ p {
 }
 
 /* GRID ELEMENT STYLING */
+.gap-2 {
+  gap: 2rem;
+}
 .y-center {
   align-self: center;
 }
@@ -930,16 +933,17 @@ form button:hover {
 
   /* GRID LAYOUTS */
   .two-col {
-    gap: 2rem;
     grid-template-columns: 1fr 1fr;
   }
 
   .two-col-start {
+    gap: 2rem;
     grid-template-areas:
       "image content";
   }
 
   .two-col-end {
+    gap: 2rem;
     grid-template-areas:
       "content image"
   }

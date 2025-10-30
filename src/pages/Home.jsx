@@ -34,7 +34,7 @@ const Home = () => {
 
 
             <section className='bg-blue-100'>
-                <div className='two-col maxw-1200'>
+                <div className='two-col gap-2 maxw-1200'>
                     <div className='card1'>
                         <img 
                             src={`${hotelBlue1Small}`}
