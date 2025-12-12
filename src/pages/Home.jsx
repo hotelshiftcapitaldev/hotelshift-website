@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <section>
+            <section className='multi-section-top'>
                 <div className='two-col two-col-start maxw-1200'>
                     <img 
                         src={`${hotelBlue2Small}`} 
@@ -24,77 +24,24 @@ const Home = () => {
                         fetchPriority='auto'
                         loading='lazy' />
                     <div className='col-content'>
-                        <h2>We Renovate. <span className='text-yellow-500'>You Benefit.</span></h2>
-                        <p>HotelShift Capital reimagines how real estate serves communities. By repurposing underutilized hotels and motels into modern, attainable apartment homes, we breathe new life into overlooked properties and neighborhoods. Our mission is to create spaces that inspire connection, stability, and long-term value - for residents, investors, and the communities we serve.</p>
-                        <p>We combine adaptive reuse expertise with disciplined, impact-driven investing. Every project is rooted in deep market research, operational insight, and hands-on experience in development and management. We don’t just identify potential - we build it, transforming challenges into opportunity and vision into legacy.</p>
-                        <Link to='/our-strategy' className='cta-btn2'>Learn How We Do It</Link>
+                        <h2>Make SHIFT Happen.</h2>
+                        <ol>
+                            <li>We don't take entitlement risk - we only lose after we've overcome zoning and regulatory hurdles.</li>
+                            <li>We only convert hotels & we only convert to multifamily.</li>
+                            <li>We want to provide the best value C class unit in the markets where we operate.</li>
+                            <li>We have in-house property management which allows us to operate during construction to maximize cashflow.</li>
+                            <li>We are laser focused - Hotel Conversion is all we do.</li>
+                        </ol>
+                        <Link to='/our-strategy' className='cta-btn btn-yellow'>Learn How We Do It</Link>
                     </div>
                 </div>
             </section>
 
 
-            <section className='bg-blue-100'>
-                <div className='two-col gap-2 maxw-1200'>
-                    <div className='card1'>
-                        <img 
-                            src={`${hotelBlue1Small}`}
-                            className='img-sm'
-                            alt='Small image of a hotel'
-                            decoding='async'
-                            fetchPriority='auto'
-                            loading='lazy' />
-                        <h2>Our Strategy</h2>
-                        <p>Join us in turning hotel conversions into high-performing, impact-driven investments.</p>
-                        <Link to='/our-strategy' className='cta-btn2'>How It Works</Link>
-                    </div>
-                    <div>
-                        <div className='card-stacked'>
-                            <img 
-                                src={`${hotelBlue1Small}`}
-                                className='img-xs'
-                                alt='Small image of a hotel'
-                                decoding='async'
-                                fetchPriority='auto'
-                                loading='lazy' />
-                            <div>
-                                <h3>Acquire Strategically</h3>
-                                <p>Acquire distressed hotels in high-growth metros for adaptive reuse and workforce housing projects.</p>
-                            </div>
-                        </div>
-                        <hr className='margin-y-2rem' />
-                        <div className='card-stacked'>
-                            <img 
-                                src={`${hotelBlue1Small}`}
-                                className='img-xs'
-                                alt='Small image of a hotel'
-                                decoding='async'
-                                fetchPriority='auto'
-                                loading='lazy' />
-                            <div>
-                                <h3>Transform with Purpose</h3>
-                                <p>Convert hotels into workforce housing, maximizing design and community impact.</p>
-                            </div>
-                        </div>
-                        <hr className='margin-y-2rem' />
-                        <div className='card-stacked'>
-                            <img 
-                                src={`${hotelBlue1Small}`}
-                                className='img-xs'
-                                alt='Small image of a hotel'
-                                decoding='async'
-                                fetchPriority='auto'
-                                loading='lazy' />
-                            <div>
-                                <h3>Stabilize & Refinance</h3>
-                                <p>Refinance at 90%+ occupancy, maximizing investor returns and cash flow.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
 
 
-            <section>
+            <section className='multi-section-bottom'>
                 <div className='two-col two-col-end maxw-1200'>
                     <img 
                         src={`${hotelBlue3Small}`} 
@@ -106,7 +53,7 @@ const Home = () => {
                         <h2>Our Team.</h2>
                         <p>Every successful hotel conversion begins with a team that understands both markets and mission. At HotelSHIFT Capital, we bring together experts in adaptive reuse, real estate investment, and economic research to repurpose underutilized properties into attainable housing that creates lasting community and investor value. Our approach blends analytical precision with practical experience in development, lending, and property transformation—ensuring every project is guided by insight and purpose.</p>
                         <p>As pioneers in impact investing, we believe that smart, data-driven real estate can do more than generate returns—it can revitalize neighborhoods and expand access to quality housing. By aligning financial performance with social impact, our team transforms overlooked assets into thriving communities that embody the future of sustainable, people-centered real estate.</p>
-                        <a className='cta-btn2'>Who We Are</a>
+                        <a className='cta-btn btn-yellow'>Who We Are</a>
                     </div>
                 </div>
             </section>

@@ -11,20 +11,25 @@
   --bg-white: #f9f9f9;      /* Primary background color */
   --subtext-gray: #9D9D9D;  /* Subtext and small text on section backgrounds */
   --text-white: #fff;       /* Primary text color */
+  --text-black: #000;
   --text-blue: var(--brand-blue-500); /* Secondary text color on white background */
 
     /* BRAND BLUE - Used for headers and alternating page backgrounds */
-  --brand-blue-100: #d4e6f2;
-  --brand-blue-200: #a9cce5;
-  --brand-blue-300: #7fb3d1;
-  --brand-blue-400: #5598bb;
-  --brand-blue-500: #15527f; /* Base */
-  --brand-blue-500-opaque: rgba(21, 82, 127, .95);
-  --brand-blue-600: #11466d;
-  --brand-blue-700: #0e3a5b;
-  --brand-blue-800: #0a2d49;
-  --brand-blue-900: #061f33; /* Darker shade of primary, use for hover states or dark sections */
+  --brand-blue-100: #d3e3f0;
+  --brand-blue-200: #acc7df;
+  --brand-blue-300: #85abcd;
+  --brand-blue-400: #5e90bb;
+  --brand-blue-500: #011f3b; /* Base */
+  --brand-blue-500-opaque: rgba(14, 45, 90, .95); /* Opaque version (for overlays, modals, etc.) */
+  --brand-blue-600: #011a32;
+  --brand-blue-700: #011429;
+  --brand-blue-800: #000f20;
+  --brand-blue-900: ##000916; /* Darker shade of primary, use for hover states or dark sections */
 
+  --btn-blue: #3e6acb;
+  --btn-blue-hover: #5078d1;
+  --btn-yellow: #e6b930;
+  --btn-yellow-hover: #d9a728;
     /* BRAND YELLOW - Accent color for links, button borders, etc. */
   --brand-yellow-100: #fdf8df;
   --brand-yellow-200: #fbeeb0;
@@ -34,7 +39,10 @@
   --brand-yellow-600: #d4ad34;
   --brand-yellow-700: #b99128;
   --brand-yellow-800: #9e761c;
-  --brand-yellow-900: #735712;     
+  --brand-yellow-900: #735712;
+  
+    /* STANDARD BORDER RADIUS */
+  --btn-border-radius: 10px; /* Buttons */
 }
 
 html {
@@ -45,7 +53,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  color: var(--text-blue);
+  color: var(--text-black);
 }
 
 section {
@@ -54,6 +62,19 @@ section {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+.multi-section-top {
+  padding-bottom: 1rem;
+}
+
+.multi-section-mid {
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+
+.multi-section-bottom {
+  padding-top: 1rem;
 }
 
 /* GLOBAL FONT STYLES */
@@ -92,8 +113,15 @@ p {
 }
 
 /* SPECIAL COLOR CLASSES */
-.bg-blue-100 {
-  background-color: var(--brand-blue-100);
+.bg-blue-500 {
+  background-color: var(--brand-blue-500);
+  color: var(--text-white);
+}
+
+.bg-blue-500 h1,
+.bg-blue-500 h2,
+.bg-blue-500 h3 {
+  color: var(--text-white);
 }
 
 .text-yellow-500 {
@@ -101,7 +129,7 @@ p {
 }
 
 /* BUTTON STYLING */
-.btn2-container {
+.btn-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -115,19 +143,13 @@ p {
   display: none;
   margin-left: auto;
   margin-right: 2rem;
-  /* transition: background-color 0.3s ease, color 0.3s ease; */
   text-wrap: nowrap;
-}
-
-.signup-btn:hover {
-  background-color: var(--brand-yellow-500);
-  color: var(--brand-blue-500);
 }
 
 .cta-btn {
   background-color: var(--bg-white);
   border: none;
-  border-radius: 20px;
+  border-radius: var(--btn-border-radius);
   cursor: pointer;
   display: flex;
   font-weight: bolder;
@@ -140,30 +162,17 @@ p {
 }
 
 .cta-btn:hover {
-  background-color: var(--brand-yellow-500);
-  color: var(--brand-blue-500);
+  background-color: var(--text-white);
   text-decoration: none;
 }
 
-.cta-btn2 {
-  background-color: var(--brand-blue-500);
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  color: var(--text-white);
-  display: flex;
-  font-weight: bolder;
-  font-size: 1rem;
-  letter-spacing: .05rem;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  text-wrap: nowrap;
-  width: min-content;
+.btn-yellow {
+  background-color: var(--btn-yellow);
+  color: var(--text-blue);
 }
 
-.cta-btn2:hover {
-  background-color: var(--brand-yellow-500);
-  color: var(--brand-blue-500);
+.btn-yellow:hover {
+  background-color: var(--btn-yellow-hover);
   text-decoration: none;
 }
 
@@ -188,7 +197,7 @@ p {
   align-content: center;
   align-items: center;
   border: 2px solid var(--brand-yellow-500);
-  border-radius: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -242,6 +251,15 @@ p {
 
 .two-col .col-content {
   grid-area: content;
+}
+
+ol {
+  padding: 1rem;
+}
+
+ol li {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* GRID ELEMENT STYLING */
@@ -340,7 +358,7 @@ a:focus {
 }
 
 .nav-links a {
-  color: var(--brand-blue-500);
+  color: var(--text-black);
 }
 
 .nav-links.active {
@@ -395,7 +413,7 @@ a:focus {
 .hamburger .line {
   width: 100%;
   height: 5px;
-  background-color: var(--brand-blue-800);
+  background-color: var(--text-black);
   transition: all 0.3s ease;
 }
 
@@ -432,7 +450,7 @@ a:focus {
 .footer img {
   background-color: white;
   padding: 1rem 2rem;
-  border-radius: 20px;
+  border-radius: var(--btn-border-radius);
 }
 
 .footer-wrapper {
@@ -518,7 +536,7 @@ footer hr {
 
 .hero-content {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   margin: auto;
 }
@@ -528,7 +546,6 @@ footer hr {
 }
 
 .hero-content p {
-  color: var(--text-white);
   font-size: 1rem;
   /* max-width: 500px; */
   letter-spacing: .05rem;
@@ -546,124 +563,6 @@ footer hr {
   align-items: center;
   text-align: center;
   z-index: 10;
-}
-
-
-/* ----------------- */
-/* TOWN INFO */
-/* ----------------- */
-#town-info {
-  background-color: var(--brand-blue-500);
-  color: var(--text-white);
-  width: 100%;
-  margin: 0;
-  margin-top: -.5rem;
-}
-
-#town-info h2 {
-  color: var(--text-white);
-}
-
-.town-info-container {
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.town-info-container img {
-  width: 100%;
-  margin-top: 1rem;
-}
-
-
-/* ----------------- */
-/* PROPERTY LISTINGS */
-/* ----------------- */
-#property-listings {
-  width: 100%;
-  padding: 2rem 0 0 0;
-  margin: 0;
-}
-
-#property-listings h2 {
-  width: 100%;
-  padding: 1rem;
-  font-weight: lighter;
-}
-
-.property-cards {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 0 0 0;
-}
-
-.property-card {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem 2rem 1rem;
-}
-
-.property-image-container {
-  width: 100%;
-  margin-top: -1rem;
-  position: relative;
-}
-
-.sold {
-  font-size: 30vw;
-  color: rgba(255, 255, 255, .8);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0;
-  margin-top: -1rem;
-  padding: 0;
-  transform: translate(-50%, -50%);
-}
-
-.property-card img {
-  width: 100%;
-}
-
-.property-card-info {
-  border-left: 1px solid var(--brand-yellow-500);
-  margin: -1rem 1rem 1rem 1rem;
-  padding: 1rem .2rem 0 .2rem;
-  z-index: 10;
-}
-
-.property-card-info h3 {
-  color: var(--brand-yellow-500);
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-.property-card-info p {
-  margin: 0;
-  color: var(--brand-blue-500);
-}
-
-.property-card-info p.price {
-  margin-bottom: .5rem;
-  font-weight: bold;
-}
-
-.property-card-info p.shortDescription {
-  color: var(--subtext-gray);
-  margin-bottom: .5rem;
-  display: flex; /* change to 'none' if you want hidden on mobile */
-}
-
-.property-card:nth-child(even) {
-  background-color: var(--brand-blue-500);
-}
-
-.property-card:nth-child(even) p {
-  color: var(--text-white);
-}
-
-.property-card:nth-child(even) p:last-child {
-  color: var(--brand-yellow-500);
 }
 
 /* --------------- */
@@ -799,14 +698,14 @@ form button {
   border: none;
   color: var(--text-white);
   font-size: 1.1rem;
-  border-radius: 4px;
+  border-radius: var(--btn-border-radius);
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-weight: bold;
 }
 
 form button:hover {
-  background-color: var(--brand-yellow-500);
+  background-color: var(--brand-blue-600);
 }
 
 /* Thank you message */
@@ -853,16 +752,17 @@ form button:hover {
   /* BUTTON STYLING */
   /* SIGNUP BUTTON WILL DISPLAY HERE */
   .signup-btn {
-    background-color: var(--brand-blue-500);
     border: none;
-    border-radius: 20px;
-    color: var(--bg-white);
+    border-radius: var(--btn-border-radius);
+    cursor: pointer;
     display: flex;
     font-weight: bolder;
     font-size: 1rem;
     letter-spacing: .05rem;
     padding: 1rem 2rem;
     text-transform: uppercase;
+    text-wrap: nowrap;
+    width: min-content;
   }
 
   /* FOOTER */
@@ -891,27 +791,11 @@ form button:hover {
     font-size: 1.2rem;
   }
 
-  .hero-content a {
-    box-shadow: 5px 13px 20px rgba(0,0,0,0.5);
-  }
 
 
 
 
 
-
-  .property-card:nth-child(1) {
-    padding-top: 4rem;
-  }
-
-  .property-card {
-    padding-bottom: 8rem;
-  }
-
-  .property-card:nth-last-child(1) {
-    padding-bottom: 0;
-    margin-bottom: 0;
-  }
 
   .contact-section {
     padding: 2rem 4rem;
@@ -926,6 +810,12 @@ form button:hover {
 
 /* Large Screens (Desktops and up) */
 @media (min-width: 1024px) {
+  /* GLOBAL STYLING */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
   /* CARDS STYLING */
   .card1 {
     height: 100%;
@@ -959,59 +849,6 @@ form button:hover {
   #hero2 {
     min-height: 20vh;
   }
-
-  .town-info-container {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    grid-template-areas: 
-      'header header'
-      'image paragraph1'
-      'image paragraph2';
-  }
-
-  .town-info-container h2 {
-    grid-area: header;
-  }
-
-  .town-info-container img {
-    grid-area: image;
-  }
-
-  .town-info-container p:nth-of-type(1) {
-    grid-area: paragraph1;
-  }
-
-  .town-info-container p:nth-of-type(2) {
-    grid-area: paragraph2;
-  }
-
-  #property-listings {
-    margin: auto;
-  }
-
-  .property-card {
-    flex-direction: row;
-
-  }
-
-  .property-image-container {
-    width: 40%;
-  }
-
-  .sold {
-    top: 7rem;
-    font-size: 7rem;
-  }
-
-  .property-card-info {
-    padding: 2rem .2rem 0 2rem;
-    width: 60%;
-  }
-
-  .property-card-info p.shortDescription {
-    display: flex;
-  }
-
   .contact-section {
     padding-top: 4rem;
   }

@@ -14,9 +14,9 @@ const Hero = () => {
         <section id='hero'>
             <BGImage bgImage={bgImage} fetchPriority='high' loading='eager' />
             <div className='hero-content maxw-1200'>
-                <h1>From Transient Stays to <span className='text-yellow-500'>Thriving Communities</span></h1>
-                <p>We transform underutilized hotels into vibrant apartment ecosystems, fostering a win-win for residents and investors.</p>
-                <a className='cta-btn'>Contact Us</a>
+                <h1>Hotel To Apartment Conversions</h1>
+                <p className='text-yellow-500'>Nationwide Opportunities</p>
+                <a className='cta-btn btn-yellow'>Contact Us</a>
             </div>
             
         </section>

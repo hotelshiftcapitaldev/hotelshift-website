@@ -94,14 +94,15 @@ const Header = () => {
                 </ul>
                 
                 {/* Signup Button */}
-                <button 
+                {/* <button 
                     className='signup-btn' 
                     // aria-expanded={isMenuOpen}
                     // aria-controls='nav-menu'
                     // onClick={toggleMenu}
                     // onKeyDown={(e) => e.key === 'Enter' && toggleMenu()}>
                     >Sign Up
-                </button>
+                </button> */}
+                <a className='signup-btn btn-yellow'>Sign Up</a>
 
                 {/* Hamburger Icon for Mobile */}
                 <button 
