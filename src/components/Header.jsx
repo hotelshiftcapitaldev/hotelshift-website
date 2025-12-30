@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo/logo.png'
+import logoWhite from '../assets/logo/logo-white.png'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,14 +70,18 @@ const Header = () => {
                 {/* Logo and Name Section */}
                 <Link to='/' end className='logo-container'>
                     {/* <h2 className='site-title'>HotelShift</h2> */}
-                    <img 
-                        src={logo} 
-                        alt='Logo' 
-                        className='logo'
-                        decoding='async'
-                        fetchPriority='auto'
-                        loading='lazy' 
-                    />
+                    <picture>
+                        <source media='(max-width: 1023px)' srcSet={logo} />
+                        <source media='(min-width: 1024px)' srcSet={logoWhite} />
+                        <img 
+                            src={logo} // fallback image for browsers that don't support srcSet
+                            alt='Logo' 
+                            className='logo'
+                            decoding='async'
+                            fetchPriority='auto'
+                            loading='lazy' 
+                        />
+                    </picture>
                 </Link>
 
                 {/* Navigation Links */}

@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <section className='footer-wrapper maxw-1200'>
+            <section className='footer-wrapper maxw-1500'>
                 {/* Logo */}
                 <Link to='/' end className='logo-container'>
                     {/* <h2 className='site-title'>HotelShift</h2> */}

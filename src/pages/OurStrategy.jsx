@@ -20,7 +20,7 @@ const OurStrategy = () => {
             <Hero2 bgImage={hotelBlue3Large} />
             
             <section className='multi-section-top'>
-                <div className='two-col gap-2 two-col-start maxw-1200'>
+                <div className='two-col gap-2 two-col-start maxw-1500'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'
@@ -34,7 +34,7 @@ const OurStrategy = () => {
                 </div>
             </section>
             <section className='multi-section-mid'>
-                <div className='two-col gap-2 two-col-end maxw-1200'>
+                <div className='two-col gap-2 two-col-end maxw-1500'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'
@@ -48,7 +48,7 @@ const OurStrategy = () => {
                 </div>
             </section>
             <section className='multi-section-bottom'>
-                <div className='two-col gap-2 two-col-start maxw-1200'>
+                <div className='two-col gap-2 two-col-start maxw-1500'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'
@@ -63,7 +63,7 @@ const OurStrategy = () => {
             </section>
 
             <section className='bg-blue-500'>
-                <div className='maxw-1200'>
+                <div className='maxw-1500'>
                     <h2>Investment Philosophy: <span className='text-yellow-500'>Delivering True Alpha</span></h2>
                     <p>Our team takes the <strong>Efficient Market Hypothesis</strong> seriously. We recognize that most fund managers fail to consistently outperform the S&P 500. However, through strategic acquisitions, adaptive reuse expertise, and operational execution, <strong>HotelShift is designed to capture inefficiencies</strong> in niche real estate markets — generating true alpha through value creation, not speculation.</p>
                     <p>We believe impact-driven investing can outperform traditional benchmarks, delivering both financial returns and meaningful community outcomes.</p>

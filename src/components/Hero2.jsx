@@ -17,7 +17,7 @@ const Hero = (props) => {
     return (
         <section id='hero2'>
             <BGImage bgImage={bgImage.bgImage} fetchPriority='high' loading='eager' />
-            <div className='hero-content maxw-1200'>
+            <div className='hero-content maxw-1500'>
                 <h1>The HotelShift Strategy</h1>
             </div>
             

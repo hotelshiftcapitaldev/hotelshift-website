@@ -13,7 +13,7 @@ const Hero = () => {
     return (
         <section id='hero'>
             <BGImage bgImage={bgImage} fetchPriority='high' loading='eager' />
-            <div className='hero-content maxw-1200'>
+            <div className='hero-content maxw-1500'>
                 <h1>Hotel To Apartment Conversions</h1>
                 <p className='text-yellow-500'>Nationwide Opportunities</p>
                 <a className='cta-btn btn-yellow'>Contact Us</a>

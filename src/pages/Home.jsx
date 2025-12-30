@@ -15,8 +15,8 @@ const Home = () => {
     return (
         <>
             <Hero />
-            <section className='multi-section-top'>
-                <div className='two-col two-col-start maxw-1200'>
+            <section className='multi-section-top mh60'>
+                <div className='two-col two-col-start maxw-1500'>
                     <img 
                         src={`${hotelBlue2Small}`} 
                         alt='Image of a hotel'
@@ -41,8 +41,8 @@ const Home = () => {
             
 
 
-            <section className='multi-section-bottom'>
-                <div className='two-col two-col-end maxw-1200'>
+            <section className='multi-section-bottom mh60'>
+                <div className='two-col two-col-end maxw-1500'>
                     <img 
                         src={`${hotelBlue3Small}`} 
                         alt='Image of a hotel'
@@ -51,8 +51,8 @@ const Home = () => {
                         loading='lazy' />
                     <div className='col-content'>
                         <h2>Our Team.</h2>
-                        <p>Every successful hotel conversion begins with a team that understands both markets and mission. At HotelSHIFT Capital, we bring together experts in adaptive reuse, real estate investment, and economic research to repurpose underutilized properties into attainable housing that creates lasting community and investor value. Our approach blends analytical precision with practical experience in development, lending, and property transformation—ensuring every project is guided by insight and purpose.</p>
-                        <p>As pioneers in impact investing, we believe that smart, data-driven real estate can do more than generate returns—it can revitalize neighborhoods and expand access to quality housing. By aligning financial performance with social impact, our team transforms overlooked assets into thriving communities that embody the future of sustainable, people-centered real estate.</p>
+                        <p>HotelSHIFT Capital is led by professionals with experience in adaptive reuse, real estate investment, and economic analysis. We focus on converting underutilized hotel assets into attainable housing through a disciplined, data-driven approach.</p>
+                        <p>Our team brings practical expertise across development, lending, and asset repositioning, allowing us to evaluate risk, execute efficiently, and align returns with long-term asset performance. We invest where fundamentals support both durable cash flow and sustainable community outcomes.</p>
                         <a className='cta-btn btn-yellow'>Who We Are</a>
                     </div>
                 </div>

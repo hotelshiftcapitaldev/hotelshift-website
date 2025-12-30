@@ -2,7 +2,7 @@
 
 
 {/* <section>
-                <div className='two-col gap-2 maxw-1200'>
+                <div className='two-col gap-2 maxw-1500'>
                     <div className='card1'>
                         <img 
                             src={`${hotelBlue1Small}`}
