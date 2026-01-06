@@ -5,6 +5,9 @@ import hotelBlue1Small from '../assets/background/hotel-blue-1-small.jpg'
 import hotelBlue2Small from '../assets/background/hotel-blue-2-small.jpg'
 import hotelBlue3Small from '../assets/background/hotel-blue-3-small.jpg'
 
+import logoIcon from '../assets/logo/logo-icon.png'
+
+
 // COMPONENTS
 import CTASection from '../components/CTASection'
 
@@ -19,17 +22,55 @@ const OurStrategy = () => {
         <>
             <Hero2 bgImage={hotelBlue3Large} />
             
-            <section className='multi-section-top'>
+            <section className='multi-section-top mh60'>
                 <div className='two-col gap-2 two-col-start maxw-1500'>
-                    <img 
-                        src={`${hotelBlue2Small}`} 
-                        alt='Image of a hotel'
-                        decoding='async'
-                        fetchPriority='auto'
-                        loading='lazy' />
-                    <div className='y-center'>
-                        <h2>1. Acquire <span className='text-yellow-500'>Strategically.</span></h2>
-                        <p>We identify and purchase extended-stay and distressed hotels in high-traffic, high-growth metros — targeting properties with large rooms, strong redevelopment potential, and below-market pricing. Our acquisition strategy focuses on unlocking value others overlook through adaptive reuse and disciplined underwriting.</p>
+                    <div className=''>
+                        <h2>Why Multifamily?</h2>
+                        <div className='grid-2x2'>
+                            <p><b>Limited Supply.</b> Class C buildings are the least economical to build.</p>
+                            <p><b>Occupied.</b> Class C buildings have historically experienced low vacancy.</p>
+                            <p><b>Durable Demand.</b> Class C buildings are in demand during all economic environments.</p>
+                            <p><b>High Interest Rates.</b> High mortgage rates will increase demand for workforce rentals.</p>
+                        </div>
+                    </div>
+                    <div className=''>
+                        <h2>Why Convert Hotels?</h2>
+                        <div className='two-col-left gap-2 two-col-start'>
+                            <img 
+                                src={`${logoIcon}`} 
+                                alt='small icon'
+                                decoding='async'
+                                fetchPriority='auto'
+                                loading='lazy' />
+                            <div className='col-content'>
+                                <p><b>Straightforward Conversion.</b></p>
+                                <p>Hospitality properties can be refurbished to become apartments & extended stay hotels have rooms that contain kitchens leaving the building in need of few changes.</p>
+                            </div>
+                        </div>
+                        <div className='two-col-left gap-2 two-col-start'>
+                            <img 
+                                src={`${logoIcon}`} 
+                                alt='small icon'
+                                decoding='async'
+                                fetchPriority='auto'
+                                loading='lazy' />
+                            <div className='col-content'>
+                                <p><b>Great Locations.</b></p>
+                                <p>Hospitality properties are regularly in excellent, central locations.</p>
+                            </div>
+                        </div>
+                        <div className='two-col-left gap-2 two-col-start'>
+                            <img 
+                                src={`${logoIcon}`} 
+                                alt='small icon'
+                                decoding='async'
+                                fetchPriority='auto'
+                                loading='lazy' />
+                            <div className='col-content'>
+                                <p><b>Competitively Priced.</b></p>
+                                <p>Hotels trade at significantly lower valuations than multifamily properties, allowing us to purchase them at attractive prices.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

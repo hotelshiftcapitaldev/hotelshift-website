@@ -37,7 +37,11 @@ const Home = () => {
                 </div>
             </section>
 
-
+            <section className='multi-section-mid mh60 bg-blue-500'>
+                <div className='maxw-1500'>
+                    <h2>We combine the <span className='text-yellow-500'>high demand for workforce housing</span> with the <span className='text-yellow-500'>high supply of older hotels.</span></h2>
+                </div>
+            </section>
             
 
 
