@@ -4,8 +4,14 @@ import hotelBlue3Large from '../assets/background/hotel-blue-3-large.jpg'
 import hotelBlue1Small from '../assets/background/hotel-blue-1-small.jpg'
 import hotelBlue2Small from '../assets/background/hotel-blue-2-small.jpg'
 import hotelBlue3Small from '../assets/background/hotel-blue-3-small.jpg'
-
-import logoIcon from '../assets/logo/logo-icon.png'
+// LOGO
+import logoWhite from '../assets/logo/logo-white.png'
+// ICONS
+import autorenewYellow from '../assets/icons/autorenew_yellow.svg'
+import nearmeYellow from '../assets/icons/nearme_yellow.svg'
+import sellYellow from '../assets/icons/sell_yellow.svg'
+// IMAGE
+import howItsDone from '../assets/images/how_its_done.png'
 
 
 // COMPONENTS
@@ -27,87 +33,70 @@ const OurStrategy = () => {
                     <div className=''>
                         <h2>Why Multifamily?</h2>
                         <div className='grid-2x2'>
-                            <p><b>Limited Supply.</b> Class C buildings are the least economical to build.</p>
-                            <p><b>Occupied.</b> Class C buildings have historically experienced low vacancy.</p>
-                            <p><b>Durable Demand.</b> Class C buildings are in demand during all economic environments.</p>
-                            <p><b>High Interest Rates.</b> High mortgage rates will increase demand for workforce rentals.</p>
+                            <p><b>Limited Supply.</b><br /> Class C buildings are the least economical to build.</p>
+                            <p><b>Occupied.</b><br /> Class C buildings have historically experienced low vacancy.</p>
+                            <p><b>Durable Demand.</b><br /> Class C buildings are in demand during all economic environments.</p>
+                            <p><b>High Interest Rates.</b><br /> High mortgage rates will increase demand for workforce rentals.</p>
                         </div>
                     </div>
                     <div className=''>
                         <h2>Why Convert Hotels?</h2>
                         <div className='two-col-left gap-2 two-col-start'>
                             <img 
-                                src={`${logoIcon}`} 
+                                src={`${autorenewYellow}`} 
                                 alt='small icon'
                                 decoding='async'
                                 fetchPriority='auto'
                                 loading='lazy' />
                             <div className='col-content'>
-                                <p><b>Straightforward Conversion.</b></p>
-                                <p>Hospitality properties can be refurbished to become apartments & extended stay hotels have rooms that contain kitchens leaving the building in need of few changes.</p>
+                                <p><b>Straightforward Conversion.</b><br />Hospitality properties can be refurbished to become apartments & extended stay hotels have rooms that contain kitchens leaving the building in need of few changes.</p>
                             </div>
                         </div>
                         <div className='two-col-left gap-2 two-col-start'>
                             <img 
-                                src={`${logoIcon}`} 
+                                src={`${nearmeYellow}`} 
                                 alt='small icon'
                                 decoding='async'
                                 fetchPriority='auto'
                                 loading='lazy' />
                             <div className='col-content'>
-                                <p><b>Great Locations.</b></p>
-                                <p>Hospitality properties are regularly in excellent, central locations.</p>
+                                <p><b>Great Locations.</b><br />Hospitality properties are regularly in excellent, central locations.</p>
                             </div>
                         </div>
                         <div className='two-col-left gap-2 two-col-start'>
                             <img 
-                                src={`${logoIcon}`} 
+                                src={`${sellYellow}`} 
                                 alt='small icon'
                                 decoding='async'
                                 fetchPriority='auto'
                                 loading='lazy' />
                             <div className='col-content'>
-                                <p><b>Competitively Priced.</b></p>
-                                <p>Hotels trade at significantly lower valuations than multifamily properties, allowing us to purchase them at attractive prices.</p>
+                                <p><b>Competitively Priced.</b><br />Hotels trade at significantly lower valuations than multifamily properties, allowing us to purchase them at attractive prices.</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section className='multi-section-mid'>
-                <div className='two-col gap-2 two-col-end maxw-1500'>
-                    <img 
-                        src={`${hotelBlue2Small}`} 
-                        alt='Image of a hotel'
-                        decoding='async'
-                        fetchPriority='auto'
-                        loading='lazy' />
-                    <div className='y-center'>
-                        <h2>2. Transform with <span className='text-yellow-500'>Purpose.</span></h2>
-                        <p>Through adaptive reuse, we renovate these assets into modern workforce housing — efficient, comfortable, and community-centered. Every conversion is guided by design, operational, and sustainability principles that enhance long-term value for both residents and investors.</p>
-                    </div>
-                </div>
-            </section>
-            <section className='multi-section-bottom'>
-                <div className='two-col gap-2 two-col-start maxw-1500'>
-                    <img 
-                        src={`${hotelBlue2Small}`} 
-                        alt='Image of a hotel'
-                        decoding='async'
-                        fetchPriority='auto'
-                        loading='lazy' />
-                    <div className='y-center'>
-                        <h2>3. Stabilize and <span className='text-yellow-500'>Refinance.</span></h2>
-                        <p>Once properties achieve at least 90% occupancy, we secure multifamily appraisals and refinance at market valuation. This process enables us to return capital to investors, improve portfolio performance, and sustain cash flow while retaining long-term ownership upside.</p>
                     </div>
                 </div>
             </section>
 
-            <section className='bg-blue-500'>
+            <section className='multi-section-mid mh60 bg-blue-500'>
                 <div className='maxw-1500'>
-                    <h2>Investment Philosophy: <span className='text-yellow-500'>Delivering True Alpha</span></h2>
-                    <p>Our team takes the <strong>Efficient Market Hypothesis</strong> seriously. We recognize that most fund managers fail to consistently outperform the S&P 500. However, through strategic acquisitions, adaptive reuse expertise, and operational execution, <strong>HotelShift is designed to capture inefficiencies</strong> in niche real estate markets — generating true alpha through value creation, not speculation.</p>
-                    <p>We believe impact-driven investing can outperform traditional benchmarks, delivering both financial returns and meaningful community outcomes.</p>
+                    <center><h2>How Exactly Is This Done?</h2></center>
+                    <img 
+                        src={`${howItsDone}`} 
+                        alt='a diagram of the hotelshift strategy'
+                        decoding='async'
+                        fetchPriority='auto'
+                        loading='lazy'
+                        className='lg-img margin-y-2rem' />
+                    <center>
+                        <img 
+                            src={`${logoWhite}`} 
+                            alt='HotelShift logo white'
+                            decoding='async'
+                            fetchPriority='auto'
+                            loading='lazy'
+                            className='maxw-200' />
+                    </center>
                 </div>
             </section>
 

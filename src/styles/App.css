@@ -102,6 +102,9 @@ p {
 }
 
 /* CUSTOM HEIGHTS AND WIDTH CLASSES */
+.maxw-200 {
+  max-width: 200px;
+}
 
 .maxw-500 {
   max-width: 700px;
@@ -196,6 +199,12 @@ p {
   top: 0;
   left: 0;
   z-index: -10;
+}
+
+.lg-img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* CARDS STYLING */
