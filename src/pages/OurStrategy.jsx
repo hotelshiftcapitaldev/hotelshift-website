@@ -87,7 +87,7 @@ const OurStrategy = () => {
                         decoding='async'
                         fetchPriority='auto'
                         loading='lazy'
-                        className='lg-img margin-y-2rem' />
+                        className='lg-img margin-y-2rem maxw-1200' />
                     <center>
                         <img 
                             src={`${logoWhite}`} 
