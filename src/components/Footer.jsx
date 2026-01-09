@@ -38,7 +38,7 @@ const Footer = () => {
                     <ul>
                         <li><Link to='/our-strategy'>The Hotel Shift Strategy</Link></li>
                         <li><a href='#contact'>Newsroom</a></li>
-                        <li><a href='#contact'>Our Team</a></li>
+                        <li><Link to='/our-team'>Our Team</Link></li>
                         <li><a href='#contact'>Why Hotels?</a></li>
                         <li><a href='#contact'>Contact</a></li>
                     </ul>
