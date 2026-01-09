@@ -241,6 +241,10 @@ p {
   object-position: center;
 }
 
+.z-index--10 {
+  z-index: -10 !important;
+}
+
 /* ----------------- */
 /* ------LISTS------ */
 /* ----------------- */

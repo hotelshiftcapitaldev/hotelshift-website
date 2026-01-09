@@ -58,7 +58,7 @@ const OurTeam = () => {
             </section>
 
             <section className='multi-section-mid mh60 bg-blue-500-opaque'>
-                <BGImage bgImage={planningMedium} />
+                <BGImage bgImage={planningMedium} className='bg-img z-index--10' />
                 <div className='maxw-1500'>
                     <h2>Led By Builders, <span className='text-yellow-500'>Backed By Investors.</span></h2>
                 </div>

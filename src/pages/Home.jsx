@@ -57,7 +57,7 @@ const Home = () => {
                         <h2>Our Team.</h2>
                         <p>HotelSHIFT Capital is led by professionals with experience in adaptive reuse, real estate investment, and economic analysis. We focus on converting underutilized hotel assets into attainable housing through a disciplined, data-driven approach.</p>
                         <p>Our team brings practical expertise across development, lending, and asset repositioning, allowing us to evaluate risk, execute efficiently, and align returns with long-term asset performance. We invest where fundamentals support both durable cash flow and sustainable community outcomes.</p>
-                        <a className='cta-btn btn-yellow'>Who We Are</a>
+                        <Link to='/our-team' className='cta-btn btn-yellow'>Meet The Team</Link>
                     </div>
                 </div>
             </section>
