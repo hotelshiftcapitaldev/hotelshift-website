@@ -11,3 +11,6 @@
 ## [X]  tone down the border radius.
 ## [ ] Increasing whitespace and simplifying layouts
 ## [ ] Adjusting the design to feel more minimal, modern, and consistent with the presentation
+
+
+

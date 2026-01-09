@@ -228,7 +228,7 @@ p {
   left: 0;
   z-index: 0;
   opacity: 0;
-  transition: opacity 300ms ease;
+  transition: opacity 1000ms ease;
 }
 
 .bg-img[src] {
@@ -266,11 +266,10 @@ ol li:not(:first-child):not(:last-child) {
 .team-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  place-items: center;
   width: 100%;
   max-width: 500px;
+  text-align: left;
 }
 
 .team-card .img-container {
@@ -288,8 +287,11 @@ ol li:not(:first-child):not(:last-child) {
   object-position: top;
 }
 
+.team-card h3,
 .team-card p {
   margin: 0;
+  width: 100%;
+  max-width: 360px;
 }
 
 .team-card hr {
@@ -297,16 +299,24 @@ ol li:not(:first-child):not(:last-child) {
   height: 1px;
   background-color: var(--subtext-gray);
   width: 25%;
+  margin: 2rem auto;
 }
 
 /* ----------------- */
 /* -----FLEXBOX----- */
 /* ----------------- */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .flex-wrap {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 }
 
 
@@ -380,10 +390,13 @@ header .logo-container {
   max-width: 70%;
 }
 
+header .logo {
+  aspect-ratio: 736 / 150;
+}
+
 .logo {
     width: 350px;
     max-width: 100%;
-    aspect-ratio: 736 / 150;
     height: auto;
 }
 

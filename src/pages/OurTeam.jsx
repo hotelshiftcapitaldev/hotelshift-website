@@ -1,19 +1,6 @@
 // ASSETS
 import hotelBlue1Large from '../assets/background/hotel-blue-1-large.jpg'
-import hotelBlue2Large from '../assets/background/hotel-blue-2-large.jpg'
-import hotelBlue3Large from '../assets/background/hotel-blue-3-large.jpg'
-import hotelBlue1Small from '../assets/background/hotel-blue-1-small.jpg'
-import hotelBlue2Small from '../assets/background/hotel-blue-2-small.jpg'
-import hotelBlue3Small from '../assets/background/hotel-blue-3-small.jpg'
 import planningMedium from '../assets/background/planning-medium.jpg'
-// LOGO
-import logoWhite from '../assets/logo/logo-white.png'
-// ICONS
-import autorenewYellow from '../assets/icons/autorenew_yellow.svg'
-import nearmeYellow from '../assets/icons/nearme_yellow.svg'
-import sellYellow from '../assets/icons/sell_yellow.svg'
-// IMAGE
-import howItsDone from '../assets/images/how_its_done.png'
 
 // COMPONENTS
 import CTASection from '../components/CTASection'
@@ -25,7 +12,7 @@ import Hero2 from '../components/Hero2'
 // MAP OUT TEAM MEMBERS
 import teamMembers from '../data/teamData'
 const teamCard = teamMembers.map(member => (
-    <div className='team-card'>
+    <div key={member.name} className='team-card'>
         <div className='img-container'>
             <img 
                 className=''
@@ -50,8 +37,8 @@ const OurTeam = () => {
         <>
             <Hero2 bgImage={hotelBlue1Large} pageTitle="Meet Our Team" />
             
-            <section className='flex-wrap mh60'>
-                <h2>Team & Strategic Backing</h2>
+            <section className='mh60'>
+                <h2><center>Team & Strategic Backing</center></h2>
                 <div className='flex-wrap'>
                     {teamCard}
                 </div>
