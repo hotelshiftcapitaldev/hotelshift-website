@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import './styles/App.css'
 
 // COMPONENTS
@@ -13,17 +13,17 @@ import OurTeam from './pages/OurTeam'
 
 
 function App() {
-  const pageChange = useNavigate()
+  const {pathname} = useLocation()
 
   /* Scroll to top of page whenever page changes */
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [pageChange])
+  }, [pathname])
 
   return (
     <>
       <Header />
-      <Routes location={location}>
+      <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/our-strategy' element={<OurStrategy />} />
         <Route path='/our-team' element={<OurTeam />} />
