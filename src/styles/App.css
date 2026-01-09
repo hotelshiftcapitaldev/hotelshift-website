@@ -383,6 +383,7 @@ header .logo-container {
 .logo {
     width: 350px;
     max-width: 100%;
+    aspect-ratio: 736 / 150;
     height: auto;
 }
 
