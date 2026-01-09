@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 // PAGES
 import Home from './pages/Home'
 import OurStrategy from './pages/OurStrategy'
+import OurTeam from './pages/OurTeam'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Routes location={location}>
         <Route path='/' element={<Home />} />
         <Route path='/our-strategy' element={<OurStrategy />} />
+        <Route path='/our-team' element={<OurTeam />} />
         {/* <Route path='/projects' element={<Projects />} />
         <Route path='/project/:id' element={<ProjectDetails />} />
         <Route path='/contact' element={<Contact />} /> */}

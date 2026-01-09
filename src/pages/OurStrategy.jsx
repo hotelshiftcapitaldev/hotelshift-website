@@ -26,7 +26,7 @@ const OurStrategy = () => {
 
     return (
         <>
-            <Hero2 bgImage={hotelBlue3Large} />
+            <Hero2 bgImage={hotelBlue3Large} pageTitle="The HotelShift Strategy" />
             
             <section className='multi-section-top mh60'>
                 <div className='two-col gap-2 two-col-start maxw-1500'>

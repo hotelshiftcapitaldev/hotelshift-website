@@ -77,8 +77,10 @@ section {
   padding-top: 2rem;
 }
 
-/* GLOBAL FONT STYLES */
 
+/* -------------------- */
+/* -GLOBAL FONT STYLES- */
+/* -------------------- */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   color: var(--brand-blue-500);
@@ -101,7 +103,9 @@ p {
   line-height: 1.6;
 }
 
+/* -------------------------------- */
 /* CUSTOM HEIGHTS AND WIDTH CLASSES */
+/* -------------------------------- */
 .maxw-200 {
   max-width: 200px;
 }
@@ -119,21 +123,41 @@ p {
   min-height: clamp(700px, 75vh, 1000px);
 }
 
-/* SPACING SCALE */
+/* ----------------- */
+/* --SPACING SCALE-- */
+/* ----------------- */
+.gap-2 {
+  gap: 2rem;
+}
+
 .margin-y-2rem {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
+.y-center {
+  align-self: center;
+}
+
+/* -------------------- */
 /* CUSTOM COLOR CLASSES */
+/* -------------------- */
 .bg-blue-500 {
   background-color: var(--brand-blue-500);
   color: var(--text-white);
 }
 
+.bg-blue-500-opaque {
+  background-color: var(--brand-blue-500-opaque);
+  color: var(--text-white);
+}
+
 .bg-blue-500 h1,
+.bg-blue-500-opaque h1,
 .bg-blue-500 h2,
-.bg-blue-500 h3 {
+.bg-blue-500-opaque h2,
+.bg-blue-500 h3,
+.bg-blue-500-opaque h3 {
   color: var(--text-white);
 }
 
@@ -141,7 +165,9 @@ p {
   color: var(--brand-yellow-500);
 }
 
-/* BUTTON STYLING */
+/* ----------------- */
+/* -----BUTTONS----- */
+/* ----------------- */
 .btn-container {
   display: flex;
   flex-direction: row;
@@ -189,7 +215,9 @@ p {
   text-decoration: none;
 }
 
-/* IMAGE STYLING */
+/* ------------------ */
+/* ------IMAGES------ */
+/* ------------------ */
 .bg-img {
   position: absolute;
   height: 100%;
@@ -198,7 +226,13 @@ p {
   object-position: center;
   top: 0;
   left: 0;
-  z-index: -10;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.bg-img[src] {
+  opacity: 1;
 }
 
 .lg-img {
@@ -207,47 +241,77 @@ p {
   object-position: center;
 }
 
-/* CARDS STYLING */
-.card1 {
-  align-content: center;
-  align-items: center;
-  border: 2px solid var(--brand-yellow-500);
-  border-radius: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  width: 100%;
+/* ----------------- */
+/* ------LISTS------ */
+/* ----------------- */
+ol {
   padding: 1rem;
-  place-items: center;
-  text-align: center;
-}
-.card1 img {
-  display: inline-block !important;
-  border-radius: 50%;
-  /* aspect-ratio: 16 / 9; rectangle */
-  aspect-ratio: 1 / 1;
-  max-width: 150px;
-  /* max-width: 200px; rectangle*/
-  width: auto !important;
-  height: auto !important;
 }
 
-.card-stacked {
+ol li:not(:first-child):not(:last-child) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* ----------------- */
+/* ------CARDS------ */
+/* ----------------- */
+
+/* ----TEAM CARDS---- */
+.team-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
 }
-.card-stacked img {
-  display: block !important;
-  aspect-ratio: 1/1; /* icon placeholder */
-  border-radius: 50%; /* icon placeholder */
+
+.team-card .img-container {
+  margin-bottom: 1rem;
+  max-width: 360px;
+  height: auto;
+  aspect-ratio: 1/1;
+  overflow: hidden;
 }
-.card-stacked p {
+
+.team-card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.team-card p {
   margin: 0;
 }
 
-/* GRID TYPES */
+.team-card hr {
+  border: none;
+  height: 1px;
+  background-color: var(--subtext-gray);
+  width: 25%;
+}
+
+/* ----------------- */
+/* -----FLEXBOX----- */
+/* ----------------- */
+.flex-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+/* ----------------- */
+/* ------GRIDS------ */
+/* ----------------- */
+
+/* ----GRID TYPES---- */
 .two-col,
 .two-col-left {
   align-items: start;
@@ -258,6 +322,7 @@ p {
   grid-template-areas: "content";
 }
 
+/* --GRID ELEMENT STYLING-- */
 .two-col img {
   display: none;
   grid-area: image;
@@ -272,23 +337,6 @@ p {
   width: 100%;
 }
 
-ol {
-  padding: 1rem;
-}
-
-ol li:not(:first-child):not(:last-child) {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* GRID ELEMENT STYLING */
-.gap-2 {
-  gap: 2rem;
-}
-
-.y-center {
-  align-self: center;
-}
 
 /* ------------- */
 /* ACCESSIBILITY */
@@ -550,6 +598,12 @@ footer hr {
 }
 
 #hero,
+#hero2 {
+  isolation: isolate;
+  background-color: var(--brand-blue-500);
+}
+
+#hero,
 #hero2,
 #cta {
   min-height: auto;
@@ -566,6 +620,7 @@ footer hr {
   gap: 1rem;
   width: 100%;
   margin: auto;
+  z-index: 1;
 }
 
 .hero-content h1 {
@@ -841,12 +896,13 @@ form button:hover {
 
   /* GLOBAL STYLING */
 
-  /* CARDS STYLING */
-  .card1 {
-    height: 100%;
+  /* CARDS */
+  .team-card hr {
+    display: none;
   }
 
-  /* GRID LAYOUTS */
+
+  /* GRIDS */
   .two-col {
     gap: 4rem;
     grid-template-columns: 1fr 1fr;

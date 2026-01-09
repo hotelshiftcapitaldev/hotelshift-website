@@ -93,7 +93,7 @@ const Header = () => {
                     {isMenuOpen ? <li><Link to='/' end onClick={closeMenu}>Home</Link></li> : <></> }
                     <li><Link to='/our-strategy' onClick={closeMenu}>The HotelShift Strategy</Link></li>
                     <li><a href='#contact' onClick={closeMenu}>Newsroom</a></li>
-                    <li><a href='#contact' onClick={closeMenu}>Our Team</a></li>
+                    <li><a href='/our-team' onClick={closeMenu}>Our Team</a></li>
                     <li><a href='#contact' onClick={closeMenu}>Why Hotels?</a></li>
                     <li><a href='#contact' onClick={closeMenu}>Contact</a></li>
                 </ul>

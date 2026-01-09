@@ -10,6 +10,7 @@ import BGImage from './BGImage'
 const Hero = (props) => {
     // define a default image if no image is passed as a prop
     const defaultImage = { bgImage: hotelBlue3Large }
+    const pageTitle = props.pageTitle
 
     // merge defaultImage with any props passed in
     const bgImage = { ...defaultImage, ...props }
@@ -18,7 +19,7 @@ const Hero = (props) => {
         <section id='hero2'>
             <BGImage bgImage={bgImage.bgImage} fetchPriority='high' loading='eager' />
             <div className='hero-content maxw-1500'>
-                <h1>The HotelShift Strategy</h1>
+                <h1>{pageTitle}</h1>
             </div>
             
         </section>
